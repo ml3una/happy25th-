@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ♡</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+  font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.screen {
+  min-height: 100vh;
+  padding: 35px 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* OPENING */
+
+.opening-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 10px;
+}
+
+.subtitle {
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.main-btn {
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 13px 25px;
+  font-size: 16px;
+}
+
+/* MENU */
+
+.menu-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.card {
+  border: 2px solid #111;
+  border-radius: 20px;
+  padding: 25px;
+  background: white;
+  font-size: 19px;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* BOOK */
+
+.book {
+  width: 100%;
+  max-width: 600px;
+}
+
+.book img {
+  width: 100%;
+  max-width: 480px;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #111;
+}
+
+.page-number {
+  margin: 18px;
+  font-size: 15px;
+}
+
+.page-text {
+  font-size: 18px;
+  margin: 15px 0 25px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: white;
+  border: 2px solid #111;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+/* FLOWERS */
+
+.flower-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.flower-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #111;
+}
+
+/* LETTER */
+
+.letter {
+  background: #faf8f2;
+  border: 2px solid #111;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.letter h2 {
+  text-align: center;
+}
+
+.back {
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<section id="opening" class="screen active">
+
+  <img src="opening1.jpg" class="opening-img">
+
+  <h1>hi, my love ♡</h1>
+
+  <p class="subtitle">
+    i made a little something for you.
+  </p>
+
+  <button class="main-btn" onclick="showScreen('menu')">
+    open it ♡
+  </button>
+
+</section>
+
+
+<!-- MENU -->
+<section id="menu" class="screen">
+
+  <div class="menu-title">a little something for you</div>
+
+  <div class="menu">
+
+    <button class="card" onclick="openBook()">
+      📖 our little book
+    </button>
+
+    <button class="card" onclick="showScreen('flowers')">
+      🌷 some flowers
+    </button>
+
+    <button class="card" onclick="showScreen('letter')">
+      💌 a letter
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MEMORY BOOK -->
+<section id="book" class="screen">
+
+  <div class="book">
+
+    <h2>our little book</h2>
+
+    <div class="page-number" id="pageNumber">
+      page 1 / 17
+    </div>
+
+    <img id="memoryImage" src="memory1.jpg">
+
+    <div class="page-text" id="pageText">
+      one of my favorite memories ♡
+    </div>
+
+    <div class="navigation">
+
+      <button class="nav-btn" onclick="previousPage()">
+        ← back
+      </button>
+
+      <button class="nav-btn" onclick="nextPage()">
+        next →
+      </button>
+
+    </div>
+
+    <button class="nav-btn back" onclick="showScreen('menu')">
+      back to menu
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- FLOWERS -->
+<section id="flowers" class="screen">
+
+  <h2>some flowers for you 🌷</h2>
+
+  <p class="subtitle">
+    because you deserve pretty things too.
+  </p>
+
+  <div class="flower-grid">
+
+    <img src="flowers1.jpg">
+    <img src="flowers2.jpg">
+    <img src="flowers3.jpg">
+
+  </div>
+
+  <button class="nav-btn back" onclick="showScreen('menu')">
+    back to menu
+  </button>
+
+</section>
+
+
+<!-- LETTER -->
+<section id="letter" class="screen">
+
+  <div class="letter">
+
+    <h2>my beloved ♡</h2>
+
+    <p>
+      Happy 25th birthday, my love.
+    </p>
+
+    <p>
+      I don't think words will ever be enough to explain
+      how much you mean to me, but I'll always try anyway.
+    </p>
+
+    <p>
+      You are one in a million. There are so many wonderful
+      people in this world, but there is something about you
+      that feels completely different — something rare,
+      something almost ethereal.
+    </p>
+
+    <p>
+      I'm grateful for every memory we've made, every laugh,
+      every conversation, every little moment that became
+      something I'll keep with me.
+    </p>
+
+    <p>
+      I hope this next year brings you everything you deserve.
+      And I hope you know that wherever life takes us,
+      what we have will always mean something incredibly
+      special to me.
+    </p>
+
+    <p>
+      Happy birthday, sweetheart. ♡
+    </p>
+
+    <p style="text-align:center;">
+      — yours, always
+    </p>
+
+  </div>
+
+  <button class="nav-btn back" onclick="showScreen('menu')">
+    back to menu
+  </button>
+
+</section>
+
+
+<script>
+
+let currentPage = 1;
+
+const pageTexts = [
+  "one of my favorite memories ♡",
+  "another little moment i'll always remember.",
+  "look at us 🥹",
+  "a memory worth keeping forever.",
+  "one of those moments that made me smile.",
+  "just us ♡",
+  "i love this memory.",
+  "another page of us.",
+  "you make ordinary moments special.",
+  "one for the memory book.",
+  "this one makes me happy.",
+  "a tiny piece of our story.",
+  "another moment i'll keep close.",
+  "us, being us ♡",
+  "one more memory.",
+  "almost at the end...",
+  "and there will always be more memories to make ♡"
+];
+
+function showScreen(id) {
+
+  document.querySelectorAll(".screen").forEach(screen => {
+    screen.classList.remove("active");
+  });
+
+  document.getElementById(id).classList.add("active");
+
+  window.scrollTo(0, 0);
+}
+
+function openBook() {
+  currentPage = 1;
+  updateBook();
+  showScreen("book");
+}
+
+function updateBook() {
+
+  document.getElementById("memoryImage").src =
+    "memory" + currentPage + ".jpg";
+
+  document.getElementById("pageNumber").textContent =
+    "page " + currentPage + " / 17";
+
+  document.getElementById("pageText").textContent =
+    pageTexts[currentPage - 1];
+}
+
+function nextPage() {
+
+  if (currentPage < 17) {
+    currentPage++;
+    updateBook();
+  }
+
+}
+
+function previousPage() {
+
+  if (currentPage > 1) {
+    currentPage--;
+    updateBook();
+  }
+
+}
+
+</script>
+
+</body>
+  </html>
