@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For You ♡</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -93,7 +95,7 @@ h1 {
   transform: translateY(-3px);
 }
 
-/* BOOK */
+/* MEMORY BOOK */
 
 .book {
   width: 100%;
@@ -114,9 +116,9 @@ h1 {
   font-size: 15px;
 }
 
-.page-text {
-  font-size: 18px;
-  margin: 15px 0 25px;
+.page-heart {
+  font-size: 24px;
+  margin: 18px 0;
 }
 
 .navigation {
@@ -131,6 +133,10 @@ h1 {
   border-radius: 12px;
   padding: 10px 20px;
   font-size: 15px;
+}
+
+.back {
+  margin-top: 25px;
 }
 
 /* FLOWERS */
@@ -168,7 +174,7 @@ h1 {
   border: 2px solid #111;
   border-radius: 15px;
   padding: 30px;
-  max-width: 600px;
+  max-width: 650px;
   text-align: left;
   line-height: 1.7;
   font-size: 17px;
@@ -178,18 +184,24 @@ h1 {
   text-align: center;
 }
 
-.back {
-  margin-top: 25px;
+.letter p {
+  margin-bottom: 20px;
 }
+
 </style>
 </head>
 
 <body>
 
+
 <!-- OPENING -->
+
 <section id="opening" class="screen active">
 
-  <img src="IMG_20260910_163734.jpg" class="opening-img">
+  <img
+    src="IMG_20260910_163734.jpg"
+    class="opening-img"
+  >
 
   <h1>hi, my love ♡</h1>
 
@@ -197,7 +209,10 @@ h1 {
     i made a little something for you.
   </p>
 
-  <button class="main-btn" onclick="showScreen('menu')">
+  <button
+    class="main-btn"
+    onclick="showScreen('menu')"
+  >
     open it ♡
   </button>
 
@@ -205,6 +220,7 @@ h1 {
 
 
 <!-- MENU -->
+
 <section id="menu" class="screen">
 
   <div class="menu-title">
@@ -213,15 +229,24 @@ h1 {
 
   <div class="menu">
 
-    <button class="card" onclick="openBook()">
+    <button
+      class="card"
+      onclick="openBook()"
+    >
       📖 our little book
     </button>
 
-    <button class="card" onclick="showScreen('flowers')">
+    <button
+      class="card"
+      onclick="showScreen('flowers')"
+    >
       🌷 some flowers
     </button>
 
-    <button class="card" onclick="showScreen('letter')">
+    <button
+      class="card"
+      onclick="showScreen('letter')"
+    >
       💌 a letter
     </button>
 
@@ -231,35 +256,51 @@ h1 {
 
 
 <!-- MEMORY BOOK -->
+
 <section id="book" class="screen">
 
   <div class="book">
 
     <h2>our little book</h2>
 
-    <div class="page-number" id="pageNumber">
+    <div
+      class="page-number"
+      id="pageNumber"
+    >
       page 1 / 17
     </div>
 
-    <img id="memoryImage" src="memory1.jpg">
+    <img
+      id="memoryImage"
+      src="memory1.jpg"
+    >
 
-    <div class="page-text" id="pageText">
-      the start of our memories ♡
+    <div class="page-heart">
+      ♡
     </div>
 
     <div class="navigation">
 
-      <button class="nav-btn" onclick="previousPage()">
+      <button
+        class="nav-btn"
+        onclick="previousPage()"
+      >
         ← back
       </button>
 
-      <button class="nav-btn" onclick="nextPage()">
+      <button
+        class="nav-btn"
+        onclick="nextPage()"
+      >
         next →
       </button>
 
     </div>
 
-    <button class="nav-btn back" onclick="showScreen('menu')">
+    <button
+      class="nav-btn back"
+      onclick="showScreen('menu')"
+    >
       back to menu
     </button>
 
@@ -269,22 +310,34 @@ h1 {
 
 
 <!-- FLOWERS -->
+
 <section id="flowers" class="screen">
 
   <h2>some flowers for you 🌷</h2>
 
-  <p 
-  </p>
-
   <div class="flower-grid">
 
-    <img src="IMG_20260910_201858.jpg" alt="flower">
-    <img src="IMG_20260910_202001.jpg" alt="flower">
-    <img src="IMG_20260910_202041.jpg" alt="flower">
+    <img
+      src="IMG_20260910_201858.jpg"
+      alt="flower"
+    >
+
+    <img
+      src="IMG_20260910_202001.jpg"
+      alt="flower"
+    >
+
+    <img
+      src="IMG_20260910_202041.jpg"
+      alt="flower"
+    >
 
   </div>
 
-  <button class="nav-btn back" onclick="showScreen('menu')">
+  <button
+    class="nav-btn back"
+    onclick="showScreen('menu')"
+  >
     back to menu
   </button>
 
@@ -292,6 +345,7 @@ h1 {
 
 
 <!-- LETTER -->
+
 <section id="letter" class="screen">
 
   <img
@@ -305,45 +359,223 @@ h1 {
     <h2>my beloved ♡</h2>
 
     <p>
-      Happy 25th birthday, my love.
+      A month ago, you asked me what kind of flower I think you are,
+      and I think that if you were a flower, you wouldn't be a rose
+      or a daisy, you would be a flower that's hard to find.
     </p>
 
     <p>
-      I don't think words will ever be enough to explain
-      how much you mean to me, but I'll always try anyway.
+      You wouldn't be a flower you could find anywhere, one that can
+      be picked by anyone, because you aren't like every other flower.
+      No, you're special. You have a special type of presence,
+      extraordinary. Comparing you to a daisy would be like comparing
+      a diamond to a pretty rock.
     </p>
 
     <p>
-      You are one in a million. There are so many wonderful
-      people in this world, but there is something about you
-      that feels completely different — something rare,
-      something almost ethereal.
+      I meet pretty flowers every day, but none of them compare to the
+      flower I am lucky enough to call mine.
     </p>
 
     <p>
-      I'm grateful for every memory we've made, every laugh,
-      every conversation, every little moment that became
-      something I'll keep with me.
+      You have bloomed into something outstanding regardless of the
+      bugs clawing at your roots. You have brought yourself through
+      thick and thin, both through our time together and before.
     </p>
 
     <p>
-      I hope this next year brings you everything you deserve.
-      And I hope you know that wherever life takes us,
-      what we have will always mean something incredibly
-      special to me.
+      Thank you, for everything that you have done for me. For the days
+      it feels hard to keep going, or to have patience with me, or to
+      trust me, or to fight the wounds other people have given you.
     </p>
 
     <p>
-      Happy birthday, sweetheart. ♡
+      I am so grateful to have someone like you in my life and I promise
+      that it doesn't matter what problems we go through, we will solve
+      it, together. With me you'll never be alone.
     </p>
 
-    <p style="text-align:center;">
-      — yours, always
+    <p>
+      And you have proven that it goes both ways. You have reassured me,
+      in ways nobody ever has. You have been there for me when I was
+      overthinking, stressed, hurt, tired.
+    </p>
+
+    <p>
+      Thank you for showing up for me, for always being there for me,
+      for giving me love and care even when I don't ask for it.
+    </p>
+
+    <p>
+      Maybe I am a little stubborn sometimes. I don't always ask for
+      what I need, but somehow, you still know, and you give it to me.
+    </p>
+
+    <p>
+      When I feel insecure, you quiet my mind. When I miss you,
+      you're there for me. When I crave your love, you give it to me.
+    </p>
+
+    <p>
+      For some reason, you know how to tell what I need, like you're
+      reading my mind.
+    </p>
+
+    <p>
+      The nights and the days I spend laughing with you, the girl who
+      threatens to divorce me, my nights wouldn't be the same without
+      your constant teasing.
+    </p>
+
+    <p>
+      Speaking of night, it's incredible how much we sacrificed for
+      each other. Yes, we have only known each other for five months,
+      but you have shown me great dedication through your actions and
+      your words.
+    </p>
+
+    <p>
+      Your day is my day, and your night is my night, and you have done
+      the same for me, staying up just to talk to each other. I find
+      that incredible.
+    </p>
+
+    <p>
+      That we have bonded so closely and quickly regardless of all the
+      odds. It's like I knew you. Like I'm not talking to someone I met
+      five months ago, but someone I've known much longer.
+    </p>
+
+    <p>
+      This bond is truly one of a kind, and I am so grateful that you
+      have given me that blessing. The blessing of having someone like
+      you in my life.
+    </p>
+
+    <p>
+      I hope I give you as much as you give me because you have given
+      me so much. These days full of happiness, sadness, joy and sorrow.
+      I cherish every one of them because it's with you.
+    </p>
+
+    <p>
+      Maria Fereyan Mae. The importance you hold in my life, the place
+      you hold in my mind and heart is one no one else will ever take.
+    </p>
+
+    <p>
+      I treasure your presence so dearly. Thank you for all the calls
+      and texts we had together even though I don't talk on call.
+    </p>
+
+    <p>
+      Thank you for playing with me even if you might not want to.
+      Thank you for choosing me when someone else was calling you.
+      I may not show it but I am truly grateful.
+    </p>
+
+    <p>
+      And everything you sacrifice for me means a lot to me.
+    </p>
+
+    <p>
+      I love listening to your talking, even if I don't say anything
+      back. I enjoy being by your side even if you're angry, upset,
+      sad. None of it is bad when it's with you.
+    </p>
+
+    <p>
+      I am ready to overcome any obstacles in our future, and our
+      imperfect souls can create a perfect whole one.
+    </p>
+
+    <p>
+      And that's truly the impact you have on my life, you make it
+      whole. You are my other half, and hopefully, one day, five months
+      turns into five years, ten years, fifteen, and so on.
+    </p>
+
+    <p>
+      My half adores your half.
+    </p>
+
+    <p>
+      The stickers you send me, even the angry ones. The pitch of your
+      voice when you're explaining something, telling me I'm going to
+      sleep outside and always changing your mind.
+    </p>
+
+    <p>
+      When you say "hm?" out loud when someone texts you. Your singing
+      when you're trying to get sleepy.
+    </p>
+
+    <p>
+      When you ask me for food (purple cherry?!?!) or for animals.
+      When you tell me to go to my mistress even though you know I
+      don't have one.
+    </p>
+
+    <p>
+      When you play Demonology even though it stresses you out.
+      The stories that you share with me.
+    </p>
+
+    <p>
+      I so deeply admire everything that makes the woman I can call
+      my love.
+    </p>
+
+    <p>
+      And now, I can answer your question.
+    </p>
+
+    <p>
+      If you were a flower, I think you would be a spider lily.
+    </p>
+
+    <p>
+      A spider lily is beautiful, ethereal, just like you. You have
+      some sort of otherworldly beauty and aura to you.
+    </p>
+
+    <p>
+      Yet, while it is beautiful, and highly desired, it is also very
+      hard to find, because it is special. Not ordinary.
+    </p>
+
+    <p>
+      Yes, a spider lily is very known for being a symbol of death,
+      but with death comes life.
+    </p>
+
+    <p>
+      And you don't only bring life literally, through your work, but
+      you give life to those around you.
+    </p>
+
+    <p>
+      I know, you think you're mean, but you have only ever given me
+      laughter, made me breathe.
+    </p>
+
+    <p>
+      Death also symbolizes hardship, and you resemble resilience in
+      the face of hardship.
+    </p>
+
+    <p>
+      Even though this flower symbolizes something viewed as bad,
+      death clinging to its mesmerizing petals, it still is known
+      for its beauty.
     </p>
 
   </div>
 
-  <button class="nav-btn back" onclick="showScreen('menu')">
+  <button
+    class="nav-btn back"
+    onclick="showScreen('menu')"
+  >
     back to menu
   </button>
 
@@ -353,25 +585,6 @@ h1 {
 <script>
 
 let currentPage = 1;
-
-const pageTexts = [
-  "♡",
-  "where it started"
-  "♡",
-  "♡",
-  "♡",
-  "♡",
-  "i love this memory.",
-  "you make ordinary moments special.",
-  "one for the memory book.",
-  "♡",
-  "a tiny piece of our story.",
-  "another moment i'll keep close.",
-  "us, being us ♡",
-  "one more memory.",
-  "almost at the end...",
-  "and there will always be more memories to make ♡"
-];
 
 function showScreen(id) {
 
@@ -384,11 +597,16 @@ function showScreen(id) {
   window.scrollTo(0, 0);
 }
 
+
 function openBook() {
+
   currentPage = 1;
+
   updateBook();
+
   showScreen("book");
 }
+
 
 function updateBook() {
 
@@ -398,24 +616,30 @@ function updateBook() {
   document.getElementById("pageNumber").textContent =
     "page " + currentPage + " / 17";
 
-  document.getElementById("pageText").textContent =
-    pageTexts[currentPage - 1];
 }
+
 
 function nextPage() {
 
   if (currentPage < 17) {
+
     currentPage++;
+
     updateBook();
+
   }
 
 }
 
+
 function previousPage() {
 
   if (currentPage > 1) {
+
     currentPage--;
+
     updateBook();
+
   }
 
 }
@@ -423,4 +647,4 @@ function previousPage() {
 </script>
 
 </body>
-</html>
+  </html>
